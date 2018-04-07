@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <title>Root</title>
+</head>
+<body>
+Root
+
+<div th:if="${user==null}">
+    <a href="/connect/vk">войти через вк</a>
+    <br>
+    <a href="/connect/google">войти через гугл</a>
+</div>
+
+<div th:if="${user!=null}">
+    <br>
+    <label>Логин: </label><label th:text="${user.authUser.login}"></label>
+    <br>
+    <label>Email: </label><label th:text="${user.authUser.email}"></label>
+    <br>
+    <label>Еще один Email: </label><label th:text="${user.otherEmail}"></label>
+    <br>
+    <label>Тип авторизации: </label><label th:text="${user.authUser.authServiceType}"></label>
+    <br>
+    <label th:if="${user.otherEmail == null && user.authUser.email == null}">Заполни Email, а лучше 2! А то забанят
+        аккаунт и как будешь пароль восстанавливать?</label>
+    <br>
+    <a href="/logout">выйти</a>
+</div>
+</body>
+</html>
