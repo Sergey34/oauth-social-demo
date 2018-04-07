@@ -3,22 +3,15 @@ package com.seko0716.oauth2.social.demo.controllers
 import com.seko0716.oauth2.social.demo.services.DemoUserService
 import com.seko0716.springboot.starter.oauth2.social.domains.User
 import org.springframework.security.access.prepost.PreAuthorize
+import org.springframework.security.core.Authentication
 import org.springframework.security.oauth2.provider.OAuth2Authentication
 import org.springframework.security.oauth2.provider.authentication.OAuth2AuthenticationDetails
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
 import org.springframework.stereotype.Controller
 import org.springframework.web.bind.annotation.GetMapping
 import java.security.Principal
-import javax.servlet.http.HttpServletResponse
-import org.springframework.http.ResponseEntity
-import org.springframework.web.bind.annotation.ResponseBody
 import javax.servlet.http.HttpServletRequest
-import com.sun.corba.se.spi.presentation.rmi.StubAdapter.request
-import org.springframework.security.core.Authentication
-import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler
-import org.springframework.security.core.context.SecurityContextHolder
-
-
-
+import javax.servlet.http.HttpServletResponse
 
 @Controller
 class ViewController(var demoUserService: DemoUserService) {

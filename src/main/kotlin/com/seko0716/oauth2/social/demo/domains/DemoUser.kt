@@ -7,4 +7,4 @@ import org.bson.types.ObjectId
  * otherEmail needed for reestablish account if social account bern deleted
  */
 
-data class DemoUser(var id: ObjectId=ObjectId(), var authUser: User, var otherEmail: String? = null)
+data class DemoUser(var id: ObjectId = ObjectId(), var authUser: User, var otherEmail: String? = null)

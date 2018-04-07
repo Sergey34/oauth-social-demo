@@ -13,8 +13,8 @@ import org.springframework.data.mongodb.repository.config.EnableMongoRepositorie
 
 @ComponentScan(basePackages = ["com.seko0716.oauth2.social.demo"])
 @EnableMongoRepositories(basePackages = [
-    "com.seko0716.oauth2.social.demo.repositores",
-    "com.seko0716.springboot.starter.oauth2.social.repository"//fixed bug in my starter
+    "com.seko0716.oauth2.social.demo.repositores"
+//    "com.seko0716.springboot.starter.oauth2.social.repository"//fixed bug in my starter
 ])
 @SpringBootApplication
 class Application : SpringSecurityOauth2VkGoogleAutoConfiguration() {
