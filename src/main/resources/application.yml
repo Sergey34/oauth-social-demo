@@ -1,0 +1,32 @@
+server:
+  port: 8080
+
+spring:
+  thymeleaf:
+    mode: LEGACYHTML5
+    cache: false
+
+google:
+  client:
+    clientId: clientId
+    clientSecret: clientSecret
+    accessTokenUri: https://accounts.google.com/o/oauth2/token
+    userAuthorizationUri: https://accounts.google.com/o/oauth2/v2/auth
+    clientAuthenticationScheme: form
+    scope: profile email
+  resource:
+    userInfoUri:  https://www.googleapis.com/oauth2/v3/userinfo
+  defaultRoles: ROLE_USER
+
+vk:
+  client:
+    clientId: clientId
+    clientSecret: clientSecret
+    accessTokenUri: https://oauth.vk.com/access_token
+    userAuthorizationUri: https://oauth.vk.com/authorize
+    authenticationScheme: query
+    clientAuthenticationScheme: form
+    scope: email
+  resource:
+    userInfoUri:  https://api.vk.com/method/users.get?v=5.52
+  defaultRoles: ROLE_USER
